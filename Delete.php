@@ -1,0 +1,15 @@
+<?php
+include("conn.php");
+$id = $_GET['id'];
+ $query=" DELETE FROM form WHERE id= '$id' ";
+ $data = mysqli_query($conn,$query);
+ if($data)
+ {
+    echo "<script>alert('Record Deleted')</script>";
+}
+else
+{
+    echo "<script>alert('Failed to delete')</script>";
+}
+?>
+<meta http-equiv = "refresh" content = "1; url = http://localhost/curd/crud-oprations/display.php" />
